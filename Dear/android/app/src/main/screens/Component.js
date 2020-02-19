@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, StyleSheet, View } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 
 const ComponentsScreen = () => {
@@ -13,7 +12,6 @@ const ComponentsScreen = () => {
     );
   };
 
-  const HomeStack = createStackNavigator();
 
 // const Component = function() {
 //   return <Text style={{ fontsize: 30 }}> This is it </Text>; Same as above
