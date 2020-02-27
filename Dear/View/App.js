@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './screens/homeScreen';
-import Calendar from './screens/calendarScreen';
+import HomeScreen from '../screens/homeScreen';
+import Calendar from '../screens/calendarScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Custom from './screens/custom';
+import Custom from '../screens/custom';
 
 const Tab = createBottomTabNavigator();
 
