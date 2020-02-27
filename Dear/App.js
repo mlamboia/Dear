@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/homeScreen';
 import Calendar from './screens/calendarScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Custom from './screens/custom';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,16 +16,16 @@ export default function App() {
                 tabBarIcon: ({ focused, color, size }) => {
                   let iconName;
 
-                  if (route.name === 'Home') {
+                  if (route.name === 'Custom') {
                     iconName = focused ? 'ios-color-palette' : 'ios-color-palette';
                   } else if (route.name === 'Settings') {
-                    iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
-                  }else if (route.name === 'ADD') {
-                    iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
-                  }else if (route.name === 'add') {
-                    iconName = focused ? 'ios-list-box' : 'ios-list';
-                  }else if (route.name === 'remove') {
-                    iconName = focused ? 'ios-list-box' : 'ios-list';
+                    iconName = focused ? 'ios-settings' : 'ios-settings';
+                  }else if (route.name === 'Home') {
+                    iconName = focused ? 'ios-home' : 'ios-home';
+                  }else if (route.name === 'Calendar') {
+                    iconName = focused ? 'ios-calendar' : 'ios-calendar';
+                  }else if (route.name === 'Create') {
+                    iconName = focused ? 'ios-brush' : 'ios-brush';
                   }
 
                   // You can return any component that you like here!
@@ -36,11 +37,11 @@ export default function App() {
                 inactiveTintColor: 'gray',
               }}
             >
+        <Tab.Screen name="Custom" component={Custom} />
+        <Tab.Screen name="Settings" component={HomeScreen} />
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={Calendar} />
-        <Tab.Screen name="ADD" component={HomeScreen} />
-        <Tab.Screen name="add" component={HomeScreen} />
-        <Tab.Screen name="remove" component={HomeScreen} />
+        <Tab.Screen name="Calendar" component={Calendar} />
+        <Tab.Screen name="Create" component={HomeScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
