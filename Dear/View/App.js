@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/homeScreen';
-import Calendar from '../screens/calendarScreen';
+import HomeScreen from './screens/homeScreen';
+import Calendar from './screens/calendarScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Custom from '../screens/custom';
+import Custom from './screens/custom';
+import Realmtest from './screens/realmtest';
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +39,7 @@ export default function App() {
               }}
             >
         <Tab.Screen name="Custom" component={Custom} />
-        <Tab.Screen name="Settings" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={Realmtest} />
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Calendar" component={Calendar} />
         <Tab.Screen name="Create" component={HomeScreen} />
