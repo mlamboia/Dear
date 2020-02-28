@@ -1,32 +1,25 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React, {Component}  from 'react';
+import { Text, View, ScrollView} from 'react-native';
+import Realm from 'realm';
 
-const Realm = require('realm');
-
-const CarSchema = {
-  name: 'Car',
-  properties: {
-    make:  'string',
+export default class Dogs extends Component{
+  constructor(props){
+    super(props);
+    this.state = { realm: null };
   }
-};
-
-
-Realm.open({schema: [CarSchema]})
-  .then(realm => {
-    realm.write(() => {
-      realm.create('Car', {make: 'Honda'});
+  
+  render(){
+    let realm = new Realm({
+      schema:[{name: 'Dog', properties:{name:'string'}}]
     });
-  })
+    
+    realm.write(() => {
+      realm.create('Dog', {name: 'Rex'});
+    });
 
-const carros = realm.objects('Car');
+    const DOGS = realm.objects('Dog')
 
-export default{
-
-  render() {
-    return (
-      <View>
-        <Text>  {carros} </Text>
-      </View>
-    )
+    return <ScrollView><Text>{DOGS.map(e => e.name + '\n' )}</Text></ScrollView>
   }
 }
+
