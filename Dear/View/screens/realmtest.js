@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-import { Text, View, ScrollView} from 'react-native';
+import { Text, ScrollView} from 'react-native';
 import Realm from 'realm';
 
 export default class Dogs extends Component{

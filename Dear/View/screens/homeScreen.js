@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, Button } from 'react-native';
 
 const HomeScreen = () => {
   const monkaHmm = 'Hmmmmmm!';  
@@ -7,6 +7,9 @@ const HomeScreen = () => {
     <View>
       <Text style={styles.textStyle}>This is it</Text>
       <Text>{monkaHmm}</Text>
+      <Button 
+        onPress={() => console.log(Realm.defaultPath)}
+        title={monkaHmm}/>
     </View>
     );
   };
