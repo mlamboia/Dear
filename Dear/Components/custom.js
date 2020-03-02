@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import style from './styles'
 
 const list = [{ name: 'something #1', /*key: '#1',*/ age: '10'},
               { name: 'something #2', /*key: '#2',*/ age: '11'},
@@ -23,10 +24,5 @@ const ListScreen = () => {
     />
   );
 };
-const style = StyleSheet.create({ 
-  textStyle: {marginVertical: 50}
-});
-
-
 
 export default ListScreen;
