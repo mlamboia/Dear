@@ -1,5 +1,6 @@
-import StyleSheet from 'react-native';
+//Colors
 
-const style = StyleSheet.create({ 
-  textStyle: {marginVertical: 50}
-});
+export const bgColor = "white"; //Background color
+export const headerColor = "black"; //Header color
+
+//Heights

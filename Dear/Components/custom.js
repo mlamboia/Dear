@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import style from './styles'
+import React from 'react'
+import { Text, Header, Container, Body, Title, Left, Button, Icon} from 'native-base'
+import { FlatList } from 'react-native-gesture-handler';
+import { bgColor, headerColor } from './styles';
 
 const list = [{ name: 'something #1', /*key: '#1',*/ age: '10'},
               { name: 'something #2', /*key: '#2',*/ age: '11'},
@@ -14,14 +14,27 @@ const list = [{ name: 'something #1', /*key: '#1',*/ age: '10'},
 
 const ListScreen = () => {
   return (
+    <Container style={{ backgroundColor: bgColor }}>
+      <Header style={{ backgroundColor: headerColor }}>
+        <Left>
+          <Button transparent>
+            <Icon name='arrow-back' />
+          </Button>
+        </Left>
+        <Body>
+          <Title >    MonkaHmm </Title>
+        </Body>
+      </Header>
+
     <FlatList 
       showsVerticalScrollIndicator={false}
       keyExtractor={(list) => list.name} //é necessário uma chave para um array, pode ser feito assim ou como na lista acima
       data={list} 
       renderItem={({item}) => {
-        return <Text style={style.textStyle}> {item.name} - Age {item.age} </Text>
+        return <Text> {item.name} - Age {item.age} </Text>
       }}
     />
+    </Container>
   );
 };
 
