@@ -14,15 +14,15 @@ const list = [{ name: 'something #1', /*key: '#1',*/ age: '10'},
 
 const ListScreen = () => {
   return (
-    <Container style={{ backgroundColor: bgColor }}>
-      <Header style={{ backgroundColor: headerColor }}>
+    <Container style={{ backgroundColor: bgColor }} >
+      <Header style={{ backgroundColor: headerColor }} androidStatusBarColor= {headerColor}>
         <Left>
           <Button transparent>
             <Icon name='arrow-back' />
           </Button>
         </Left>
         <Body>
-          <Title >    MonkaHmm </Title>
+          <Title style={{ color: "white"}}>    MonkaHmm </Title>
         </Body>
       </Header>
 
