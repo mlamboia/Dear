@@ -22,7 +22,7 @@ const ListScreen = () => {
           </Button>
         </Left>
         <Body>
-          <Title style={{ color: "white"}}>    MonkaHmm </Title>
+          <Title style={{ color: "white"}}> MonkaHmm </Title>
         </Body>
       </Header>
 

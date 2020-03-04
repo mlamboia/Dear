@@ -1,6 +1,6 @@
 //Colors
 
-export const bgColor = "white"; //Background color
+export const bgColor = "#AAAAAA"; //Background color
 export const headerColor = "black"; //Header color
 
 //Heights

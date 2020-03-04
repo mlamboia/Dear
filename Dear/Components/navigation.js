@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import HomeScreen from './homeScreen';
 import Calendar from './calendarScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Custom from './custom';
 import Realmtest from './realmtest';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
@@ -30,13 +30,13 @@ export default function App() {
                   }
 
                   // You can return any component that you like here!
-                  return <Ionicons name={iconName} size={size} color={color} />;
+                  return <Ionicons name={iconName} size={30} color={color} />;
                 },
-              })}
-              tabBarOptions={{
-                activeTintColor: 'black',
-                inactiveTintColor: 'gray',
-              }}
+              })
+            }
+              activeColor='grey'
+              inactiveColor='white'
+              barStyle={{ backgroundColor: 'black'}}
             >
         <Tab.Screen name="Custom" component={Custom} />
         <Tab.Screen name="Settings" component={Realmtest} />

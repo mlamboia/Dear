@@ -13,9 +13,9 @@ export default class diaries extends Component{
       schema:[{
         name: 'diary',
         properties:{
-          name:'string',
-          description: 'string',
-          // emotion: {type: 'linkingObjects', objectType: 'emotions', property: 'name'}
+          name:{type: 'string', default: 'FeelsGoodMan'},
+          description: {type: 'string', default: 'FeelsGoodMan'},
+          emotion: {type: 'string', default: 'FeelsGoodMan'}
           }
       }]
       // schema:[{
@@ -25,19 +25,15 @@ export default class diaries extends Component{
       //   }
       // }]
     });
-    
-    //  realm.write(() => {
-    // //    realm.create('emotions', {
-    // //      name: 'Happy' });
-    // //    
-    //    realm.create('diary', {
-    //       name: 'My day',
-    //       description: 'things that i did!',
-    // //       emotion: 'Happy'});
-    //  })
-    // });
-    
+       
     const diaries = realm.objects('diary')
+
+    if(diaries[0] == null){
+      realm.write(() => {
+        realm.create('diary', {});
+      })
+    }else{
+    }
 
     return (
       <FlatList 
