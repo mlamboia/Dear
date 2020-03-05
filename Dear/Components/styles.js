@@ -1,24 +1,45 @@
+import Realm from 'realm';
+
 //Colors
-import realm from 'realm';
+class Styles {}
+  Styles.schema = {
+    name: 'colors',
+    primaryKey: 'id',
+    properties: {
+      id: 'int',
+      BGCOLOR: { type: 'string', default: 'white' },
+      HEADERCOLOR: { type: 'string', default: 'white' },
+      BACKBUTTON: { type: 'string', default: 'black' },
+      ANDROIDHEADERCOLOR: { type: 'string', default: 'white' },
+      TITLE: { type: 'string', default: 'black' },
+    },
+};
+const allStyles = new Realm({schema: [Styles]});
 
-export const BGCOLOR = "white"; //Background color
-export const HEADERCOLOR = "white"; //Header color
-export const BACKBUTTON = "black";
-export const ANDROIDHEADERCOLOR = "black";
-export const TITLE = "black";
+export let Colors = allStyles.objects('colors');
 
-//Heights
+if(Colors[0] == null){
+  allStyles.write(() => {
+    allStyles.create('colors', {id: 0});
+  })
+}else{
+}
 
-class AllStyles extends Realm.Object {}
-    AllStyles.schema = {
-        name: 'color',
-        properties:{
-          BGCOLOR:{type: 'string', default: 'white'},
-          HEADERCOLOR: {type: 'string', default: 'white'},
-          BACKBUTTON: {type: 'string', default: 'black'},
-          ANDROIDHEADERCOLOR:{type: 'string', default: 'white'},
-          TITLE: {type: 'string', default: 'white'},
-          }
-    };
-export default new Realm({schema: [AllStyles]})
-  
+export function updateColor( BGCOLOR, HEADERCOLOR, BACKBUTTON, ANDROIDHEADERCOLOR, TITLE){
+  allStyles.write(() => {
+    allStyles.create('colors', 
+    {
+      id: 0, 
+      BGCOLOR: BGCOLOR, 
+      HEADERCOLOR: HEADERCOLOR, 
+      BACKBUTTON: BACKBUTTON, 
+      ANDROIDHEADERCOLOR: ANDROIDHEADERCOLOR, 
+      TITLE: TITLE}, 
+      'modified')
+  });
+};
+
+
+
+
+
