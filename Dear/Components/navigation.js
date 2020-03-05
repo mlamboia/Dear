@@ -28,15 +28,13 @@ export default function App() {
                   }else if (route.name === 'Create') {
                     iconName = focused ? 'ios-brush' : 'ios-brush';
                   }
-
-                  // You can return any component that you like here!
                   return <Ionicons name={iconName} size={30} color={color} />;
                 },
               })
             }
-              activeColor='grey'
-              inactiveColor='white'
-              barStyle={{ backgroundColor: 'black'}}
+              activeColor='black'
+              inactiveColor='grey'
+              barStyle={{ backgroundColor: 'white'}}
             >
         <Tab.Screen name="Custom" component={Custom} />
         <Tab.Screen name="Settings" component={Realmtest} />

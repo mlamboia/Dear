@@ -14,10 +14,6 @@ const HomeScreen = () => {
     );
   };
 
-// const Component = function() {
-//   return <Text style={{ fontsize: 30 }}> This is it </Text>; Same as above
-// };
-
 const styles = StyleSheet.create({
   textStyle: {
     fontSize: 30,
