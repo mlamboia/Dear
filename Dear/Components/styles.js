@@ -25,21 +25,40 @@ if(Colors[0] == null){
 }else{
 }
 
-export function updateColor( BGCOLOR, HEADERCOLOR, BACKBUTTON, ANDROIDHEADERCOLOR, TITLE){
+export function updateBGCOLOR(BGCOLOR){
   allStyles.write(() => {
     allStyles.create('colors', 
-    {
-      id: 0, 
-      BGCOLOR: BGCOLOR, 
-      HEADERCOLOR: HEADERCOLOR, 
-      BACKBUTTON: BACKBUTTON, 
-      ANDROIDHEADERCOLOR: ANDROIDHEADERCOLOR, 
-      TITLE: TITLE}, 
-      'modified')
-  });
+    { id: 0, BGCOLOR: BGCOLOR}, 'modified')}
+  );
 };
 
+export function updateHEADERCOLOR(HEADERCOLOR){
+  allStyles.write(() => {
+    allStyles.create('colors', 
+    { id: 0, HEADERCOLOR: HEADERCOLOR}, 'modified')}
+  );
+};
 
+export function updateBACKBUTTON(BACKBUTTON){
+  allStyles.write(() => {
+    allStyles.create('colors', 
+    { id: 0, BACKBUTTON: BACKBUTTON}, 'modified')}
+  );
+};
+
+export function updateANDROIDHEADERCOLOR(ANDROIDHEADERCOLOR){
+  allStyles.write(() => {
+    allStyles.create('colors', 
+    { id: 0, ANDROIDHEADERCOLOR: ANDROIDHEADERCOLOR}, 'modified')}
+  );
+};
+
+export function updateTITLE(TITLE){
+  allStyles.write(() => {
+    allStyles.create('colors', 
+    { id: 0, TITLE: TITLE}, 'modified')}
+  );
+};
 
 
 

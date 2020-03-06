@@ -7,12 +7,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Custom from './custom';
 import Realmtest from './realmtest';
 
+
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
+              initialRouteName='Home'
+              backBehavior='Home'
               screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                   let iconName;

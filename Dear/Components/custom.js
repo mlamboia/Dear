@@ -1,11 +1,11 @@
 import React from 'react'
 import { Text, Header, Container, Body, Title, Left, Button, Icon} from 'native-base'
 import { FlatList } from 'react-native-gesture-handler';
-import { Colors, updateColor} from './styles';
+import { Colors, updateBGCOLOR } from './styles';
 
-updateColor('','','red')
+updateBGCOLOR('red')
 
-const ListScreen = ({ navigation: { goBack } }) => {
+const ListScreen = ({ navigation: {goBack} }) => {
   return (
     <Container style={{ backgroundColor: Colors[0].BGCOLOR }} >
       <Header style={{ backgroundColor: Colors[0].HEADERCOLOR }} androidStatusBarColor= { Colors[0].ANDROIDHEADERCOLOR}>
