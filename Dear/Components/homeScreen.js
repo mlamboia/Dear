@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({route}) => {
   const monkaHmm = 'Hmmmmmm!';  
     return (
     <View>

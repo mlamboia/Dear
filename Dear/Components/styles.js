@@ -22,8 +22,7 @@ if(Colors[0] == null){
   allStyles.write(() => {
     allStyles.create('colors', {id: 0});
   })
-}else{
-}
+};
 
 export function updateBGCOLOR(BGCOLOR){
   allStyles.write(() => {

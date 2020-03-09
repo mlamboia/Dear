@@ -5,13 +5,13 @@ import { Colors, updateBGCOLOR } from './styles';
 
 updateBGCOLOR('red')
 
-const ListScreen = ({ navigation: {goBack} }) => {
+const ListScreen = ({ navigation }) => {
   return (
     <Container style={{ backgroundColor: Colors[0].BGCOLOR }} >
       <Header style={{ backgroundColor: Colors[0].HEADERCOLOR }} androidStatusBarColor= { Colors[0].ANDROIDHEADERCOLOR}>
           <Button transparent
           onPress={() => 
-          goBack()}>
+          navigation.navigate('Home')}>
             <Icon name='arrow-back'style={{ color: Colors[0].BACKBUTTON}}/>
           </Button>
         <Body>
