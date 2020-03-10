@@ -1,16 +1,23 @@
 import React from 'react';
-import { Text, StyleSheet, View, Button } from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
+import { Text, View, Button, Container } from 'native-base';
+import { Colors } from './styles';
 
-const HomeScreen = () => {
+
+const HomeScreen = ({navigation}) => {
   const monkaHmm = 'Hmmmmmm!';  
     return (
-    <View>
-      <Text style={styles.textStyle}>This is it</Text>
-      <Text>{monkaHmm}</Text>
-      <Button 
-        onPress={() => {monkaHmm}}
-        title={monkaHmm}/>
-    </View>
+    <Container>
+      <View>
+        <StatusBar barStyle="light-content" backgroundColor={Colors[0].ANDROIDHEADERCOLOR} />
+        <Text style={styles.textStyle}>This is it</Text>
+        <Text>{monkaHmm}</Text>
+        <Button 
+          onPress={() => 
+            navigation.navigate('imageScreen')}
+          title={monkaHmm}/>
+      </View>
+    </Container>
     );
   };
 

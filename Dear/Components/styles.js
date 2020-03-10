@@ -8,7 +8,7 @@ class Styles {}
     properties: {
       id: 'int',
       BGCOLOR: { type: 'string', default: 'white' },
-      HEADERCOLOR: { type: 'string', default: 'white' },
+      HEADERCOLOR: { type: 'string', default: 'black' },
       BACKBUTTON: { type: 'string', default: 'black' },
       ANDROIDHEADERCOLOR: { type: 'string', default: 'white' },
       TITLE: { type: 'string', default: 'black' },
@@ -58,6 +58,3 @@ export function updateTITLE(TITLE){
     { id: 0, TITLE: TITLE}, 'modified')}
   );
 };
-
-
-

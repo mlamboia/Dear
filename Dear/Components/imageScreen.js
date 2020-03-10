@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'native-base';
+import { StatusBar } from 'react-native';
+import { Colors } from './styles';
+import { changeNavigationBarColor } from 'react-native-navigation-bar-color';
+
+changeNavigationBarColor('red');
+
 
 const imageScreen = () =>{
   return (
     <View>
-      <Text> imageScreen </Text>;
+        <StatusBar barStyle="light-content" backgroundColor={Colors[0].ANDROIDHEADERCOLOR} />
+      <Text> imageScreen </Text>
     </View>
   );
 }

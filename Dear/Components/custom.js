@@ -1,9 +1,7 @@
 import React from 'react'
 import { Text, Header, Container, Body, Title, Left, Button, Icon} from 'native-base'
 import { FlatList } from 'react-native-gesture-handler';
-import { Colors, updateBGCOLOR } from './styles';
-
-updateBGCOLOR('red')
+import { Colors } from './styles';
 
 const ListScreen = ({ navigation }) => {
   return (
