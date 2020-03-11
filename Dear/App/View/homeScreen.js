@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
 import { Text, View, Button, Container } from 'native-base';
-import { Colors } from './styles';
+import { Colors } from '../Controller/styles';
 
 
 const HomeScreen = ({navigation}) => {

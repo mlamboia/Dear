@@ -1,15 +1,14 @@
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import HomeScreen from './homeScreen';
-import Calendar from './calendarScreen';
+import HomeScreen from './View/homeScreen';
+import Calendar from './View/calendarScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Custom from './custom';
-import Realmtest from './realmtest';
+import Custom from './View/custom';
+import Realmtest from './View/realmtest';
 import { createStackNavigator } from '@react-navigation/stack';
-import imageScreen from './imageScreen';
-import { Colors } from './styles';
-import { changeNavigationBarColor } from 'react-native-navigation-bar-color';
+import imageScreen from './View/imageScreen';
+import { Colors } from './Controller/styles';
 
 const Stack = createStackNavigator();
 

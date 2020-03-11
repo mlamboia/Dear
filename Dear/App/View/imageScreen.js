@@ -1,11 +1,7 @@
 import React from 'react';
 import { View, Text, Button } from 'native-base';
 import { StatusBar } from 'react-native';
-import { Colors } from './styles';
-import { changeNavigationBarColor } from 'react-native-navigation-bar-color';
-
-changeNavigationBarColor('red');
-
+import { Colors } from '../Controller/styles';
 
 const imageScreen = () =>{
   return (
