@@ -18,21 +18,21 @@ export class Diaries {}
     primaryKey: 'ID',
     properties: {
       ID: {type: 'int', default:'0' },
-      NAME: { type: 'string', default: 'white' },
-      DESCRIPTION: { type: 'string', default: 'black' },
-      EMOTION: { type: 'string', default: 'black' },
+      NAME: { type: 'string'},
+      DESCRIPTION: { type: 'string'},
+      EMOTION: { type: 'Emotions' },
       CREATED_AT: { type: 'date' }
     },
 };
 
-export class Emotions {}
-  Emotions.schema = {
-    name: 'emotions',
+export class EMOTIONS {}
+  EMOTIONS.schema = {
+    name: 'emotion',
     primaryKey: 'ID',
     properties: {
       ID: { type: 'int', default: '0'},
       NAME: { type: 'string'},
-      CREATED_AT: { type: 'date' }
+      CREATED_AT: { type: 'string' }
     },
 };
 
