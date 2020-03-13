@@ -1,20 +1,19 @@
 import React from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
 import { Text, View, Button, Container } from 'native-base';
-import { Colors } from '../Controller/styles';
-
+import { Colors } from '../../Controller/colorsController';
 
 const HomeScreen = ({navigation}) => {
   const monkaHmm = 'Hmmmmmm!';  
     return (
     <Container>
       <View>
-        <StatusBar barStyle="light-content" backgroundColor={Colors[0].ANDROIDHEADERCOLOR} />
+        <StatusBar barStyle="dark-content" backgroundColor={Colors[0].ANDROIDHEADERCOLOR} />
         <Text style={styles.textStyle}>This is it</Text>
         <Text>{monkaHmm}</Text>
         <Button 
           onPress={() => 
-            navigation.navigate('imageScreen')}
+            navigation.navigate('ImageScreen')}
           title={monkaHmm}/>
       </View>
     </Container>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, Header, Container, Body, Title, Left, Button, Icon} from 'native-base'
 import { FlatList } from 'react-native-gesture-handler';
-import { Colors } from '../Controller/styles';
+import { Colors } from '../../Controller/colorsController';
 
-const ListScreen = ({ navigation }) => {
+const Emotion = ({ navigation }) => {
   return (
     <Container style={{ backgroundColor: Colors[0].BGCOLOR }} >
     <FlatList 
@@ -18,4 +18,4 @@ const ListScreen = ({ navigation }) => {
   );
 };
 
-export default ListScreen;
+export default Emotion;

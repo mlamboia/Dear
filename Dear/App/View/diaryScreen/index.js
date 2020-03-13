@@ -2,7 +2,7 @@ import React, {Component}  from 'react';
 import { Text, FlatList} from 'react-native';
 import Realm from 'realm';
 
-export default class diaries extends Component{
+export default class Diary extends Component{
   constructor(props){
     super(props);
     this.state = { realm: null };
